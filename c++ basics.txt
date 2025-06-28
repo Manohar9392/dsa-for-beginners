@@ -1,0 +1,96 @@
+ // Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int s;
+    s=10;
+    cout<<s<<endl;
+    //string takes upto we enter space
+    //getline func used to take string until we enter the newline
+    string str;
+    getline(cin,str);
+    cout<<str;
+    //char used to take single character
+    
+    
+    
+    
+    
+    //if-else stament
+    int age;
+    cin>>age;
+    if(age>18){
+        cout<<"you are addult";
+    }
+    
+    else{
+        cout<<"you are not adult";
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    //switch case
+    int day;
+    cin>>day;
+    switch(day){
+        case 1:
+            break;
+        default:
+            break;
+            
+    }
+    
+    
+    
+    
+    
+    
+    
+    //array it stores same datatype starts from index 0
+    int arr[5];
+    //2d arrays
+    int arr[5][6];
+    
+    
+    
+    //string are also having  indexing in c++
+    string s="manu";
+    cout<<s[0];//it will returns m
+    cout<<s[len-1];//it will retun last character
+    
+    
+    
+    
+    
+    //for loop
+    for(int i=1;i<=100;i+=1)
+    {
+        cout<<"manu";
+    }
+    
+    
+    //while loop
+    //intilization int i=1;
+    while(condition){
+        
+        
+        
+        incremet++;
+    }
+    
+    do{
+        increment;
+    }while();
+    
+    
+    
+    
+    
+    
+}
+

@@ -1,0 +1,86 @@
+// Online C++ compiler to run C++ program online
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //sort using selection sort
+    // int n;
+    // cin>>n;
+    // int arr[n];
+    // for(int i=0;i<n;i++)
+    // {
+    //     cin>>arr[i];
+    // }
+    // for(int i=0;i<n-1;i++)
+    // {
+    //     int min=i;
+    //     for(int j=i;j<n;j++)
+    //     {
+    //         if(arr[j]<arr[min])
+    //         {
+    //             min=j;
+    //         }
+    //     }
+    //     swap(arr[i],arr[min]);
+    // }
+    // for(int i=0;i<n;i++)
+    // {
+    //     cout<<arr[i]<<" ";
+    // }
+    
+    
+    
+    // sorting using bubble sort
+    // int n;
+    // cin>>n;
+    // int arr[n];
+    // for(int i=0;i<n;i++)
+    // {
+    //     cin>>arr[i];
+    // }
+    // for(int i=n-2;i>=0;i--)
+    // {
+    //     for(int j=0;j<=i;j++)
+    //     {
+    //         if(arr[j]>arr[j+1])
+    //         {
+    //             swap(arr[j],arr[j+1]);
+    //         }
+    //     }
+    // }
+    //  for(int i=0;i<n;i++)
+    // {
+    //     cout<<arr[i]<<" ";
+    // }
+    
+    
+    
+    // sorting using insertion sort
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        int j=i;
+        while(j>0&& arr[j-1]>arr[j])
+        {
+            swap(arr[j-1],arr[j]);
+            j--;
+        }
+        
+    }
+    
+    
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+    
+    return 0;
+    
+}

@@ -1,0 +1,58 @@
+// Online C++ compiler to run C++ program online
+//recursion to reverse the array
+#include <bits/stdc++.h>
+using namespace std;
+bool f(int i,string m)
+{
+    if(i>=m.size()/2)
+    {
+        return true;
+    }
+    if(m[i]!=m[m.size()-i-1])
+    {
+        return false;
+    }
+    return f(i+1,m);
+}
+
+
+int main() {
+    string m;
+    cin>>m;
+    bool c=f(0,m);
+    if(c)
+    {
+        cout<<"is palindrome";
+    }
+    else{
+        cout<<"not palindrome";
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+//fibanacci series using recursion;
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+int f(int n){
+     if(n<=1)
+    {
+        return n;
+    }
+    return f(n-1)+f(n-2);
+}
+
+int main() {
+   int n;
+   cin>>n;
+   cout<<f(n);
+    return 0;
+}

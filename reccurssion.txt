@@ -1,0 +1,69 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+// void fun(int i,int n){
+//     if(i>n){
+//         return;
+//     }
+//     cout<<n<<endl;
+//     n--;
+//     fun(i,n);
+    
+// }
+void fun(int i,int n)// using backtracking ......!
+
+{
+    if(i>n)
+    {
+        return;
+    }
+    fun(i+1,n);
+    cout<<i<<endl;;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    fun(1,n);
+    
+
+    return 0;
+}
+
+
+
+
+
+
+// Online C++ compiler to run C++ program online
+//recursion to reverse the array
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverse(int i,int arr[],int n)
+{   
+    if(i>=n/2)
+    return;
+    swap(arr[i],arr[n-i-1]);
+    
+    reverse(i+1,arr,n);
+    
+    
+}
+
+int main() {
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        
+    }
+    reverse(0,arr,n);
+    for(int i:arr){
+        cout<<i<<endl;
+    }
+    
+    return 0;
+}

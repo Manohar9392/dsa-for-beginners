@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+// pair<int,pair<int,int>> p;
+// cin>>p.first;
+// cin>>p.second.first;
+// cout<<p.first<<endl;
+// cout<<p.second.first;
+
+
+
+// containers vectors;
+// vector<int> v;
+// v.emplace_back();//to enter an element
+// v(5,50)//{50,50,50,50,50}
+// v.size()//returns size;
+// vector<int>v1(v)//to copy vector
+
+//TO ACCESS THE ELEMENTS IN VECTOR...........! 
+// vector<int> v(5,20);
+// for(vector<int>::iterator it=v.begin();it!=v.end();it++)
+// {
+//     cout<<*(it)<<endl;
+// }
+
+//or for each loop;
+// for(int i:v){
+//     cout<<i;
+// }
+
+
+// INSERTION IN VECTOR
+
+v.insert(v.begin()+2,300)//add the elements at pos 3
+
+v.insert(v.begin()+2,3,70)//it will add 3 70's after pos 2
+
+//ERASE(deletion)  FUNC IN VECTOR
+v.erase(v.begin())//deletes first element
+v.erase(v.begin(),v.begin()+5)//a range deletion with first address included and second address excluded;
+
+v.pop_back()//deletes last element;
+
+v.clear()//erases all vetor
+
+v.empty()//it checks vector is empty or not;
+
+
+
+
+return 0;
+}

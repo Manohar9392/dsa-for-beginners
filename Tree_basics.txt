@@ -1,0 +1,94 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+class tree{
+  public:
+  int data;
+  tree* left;
+  tree* right;
+  tree(int val)
+  {
+      this->data=val;
+      left=right=NULL;
+  }
+};
+void preorder(tree* root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    cout<<root->data<<" ";
+    preorder(root->left);
+    preorder(root->right);
+}
+int height(tree* root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+    return max(height(root->left),height(root->right))+1;
+}
+tree* invert(tree* root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+    root->left=invert(root->left);
+    root->right=invert(root->right);
+    swap(root->left,root->right);
+    
+    return root;
+    
+}
+void sub(tree* node)
+    {
+        if(node==NULL)
+        {
+            return;
+        }
+        cout<<node->data<<" ";
+        sub(node->left);
+        sub(node->right);
+    }
+void leftpart(tree* root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+    cout<<root->data<<" ";
+    
+    
+    sub(root->left);
+}
+int noof(tree* root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+    return noof(root->left)+noof(root->right)+root->data;
+}
+
+int main() {
+    tree* root=new tree(1);
+    root->left=new tree(2);
+    root->right=new tree(3);
+    root->left->left=new tree(4);
+    root->left->right=new tree(5);
+    preorder(root);
+    cout<<"\n";
+    cout<<height(root);
+    cout<<"\n";
+    root=invert(root);
+    cout<<"\n";
+    preorder(root);
+    cout<<"\n";
+    leftpart(root);
+    cout<<"\n"<<noof(root);
+
+    return 0;
+}
